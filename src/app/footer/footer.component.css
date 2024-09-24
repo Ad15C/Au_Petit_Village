@@ -1,0 +1,27 @@
+footer {
+    background-color: #F9D0A3;
+    display: flex;
+    flex-direction: column;   
+}
+
+
+.social_networks {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: space-evenly;
+    padding: 5px;
+    margin-top: 5px;
+    gap: 15px; /* Définit un espace de 15px entre les icônes */
+}
+
+.social_networks a {
+    margin: 0 10px; /* Ajoute 10px de marge de chaque côté */
+}
+
+small {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 5px;
+}
