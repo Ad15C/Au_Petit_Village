@@ -1,0 +1,22 @@
+@font-face {
+    font-family: 'Bubbleboddy Neue';
+    src: url('/public/fonts/Bubblebody\ Neue/') format('truetype');
+    font-weight: thin;
+}
+
+@font-face {
+    font-family: 'Comfortaa';
+    src: url('/public/fonts/Comfortaa/Comfortaa-SemiBold.ttf') format('truetype');
+}
+
+h1, h2, h3 {
+    font-family: 'Bubbleboddy Neue', sans-serif;
+    color: #da001e;
+}
+
+p{
+    font-family: 'Comfortaa', sans-serif;
+    color: #151217;
+}
+
+
