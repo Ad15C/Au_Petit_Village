@@ -1,0 +1,23 @@
+header {
+    background-color: #F9D0A3;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: right; 
+    padding: 10px;
+}
+
+nav a {
+    display: inline;
+    margin-right: 30px;
+    font-size:x-large;
+    font-family: 'Comfortaa', sans-serif;
+    color: #151217;
+    text-decoration: none;
+}
+
+nav a:hover{
+    color: #DA001E;
+}
