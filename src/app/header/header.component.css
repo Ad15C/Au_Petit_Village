@@ -1,16 +1,29 @@
 header {
     background-color: #F9D0A3;
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+}
+
+img {
+    max-height: 125px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    margin-left: 0px;
+    padding-left: 0px;
+    
 }
 
 nav {
     display: flex;
     flex-direction: row;
-    justify-content: right; 
     padding: 10px;
 }
 
 nav a {
-    display: inline;
+    display: flex;
+    flex-direction: column;
     margin-right: 40px;
     font-size:x-large;
     font-family: 'Comfortaa', sans-serif;

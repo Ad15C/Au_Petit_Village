@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
+import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -8,6 +8,8 @@ import { AboutComponent } from './about/about.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { ProductComponent } from './product/product.component';
+import { ProductsService } from './products.service';
+
 
 @NgModule({
   declarations: [
@@ -16,14 +18,15 @@ import { ProductComponent } from './product/product.component';
     AboutComponent,
     HeaderComponent,
     FooterComponent,
-    ProductComponent
+    ProductComponent,
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
   providers: [
-    provideClientHydration()
+    ProductsService
   ],
   bootstrap: [AppComponent]
 })
