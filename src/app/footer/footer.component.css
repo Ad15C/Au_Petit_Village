@@ -15,9 +15,15 @@ footer {
     gap: 15px; /* Définit un espace de 15px entre les icônes */
 }
 
-.social_networks a {
-    margin: 0 10px; /* Ajoute 10px de marge de chaque côté */
+img {
+    max-width: 20px;
+    max-height: 20px;
 }
+
+.social_networks a {
+    margin: 0 10px; /* Ajoute 10px de marge de chaque côté */ 
+}
+
 
 small {
     display: flex;

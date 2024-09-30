@@ -9,14 +9,65 @@
     src: url('/public/fonts/Comfortaa/Comfortaa-SemiBold.ttf') format('truetype');
 }
 
+/* Styles pour les titres */
 h1, h2, h3 {
     font-family: 'Bubbleboddy Neue', sans-serif;
-    color: #da001e;
 }
 
-p{
+h1 {
+    color: #da001e;
+    margin: 10px;
+    padding-top: 20px;
+}
+
+h2 {
+    color: #fdd90b;
+    text-align: center; 
+    margin-bottom: 20px; 
+}
+
+/* Conteneur des produits */
+.product-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly; /*Ecartement produits égal*/
+    gap: 20px; /* Espacement entre les produits */
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+/* Style pour chaque produit */
+.product {
+   display: flex;
+   flex-direction: row;
+   width: 250px;
+   padding: 20px;
+   text-align: center;
+}
+
+/* Style pour les images */
+.product img {
+    max-width: 150px; /* Taille maximale de l'image */
+    height: auto;
+}
+
+.product p {
+    display: flex;
+    justify-content: center;
+    font-family: 'Comfortaa', sans-serif;
+    
+}
+
+.product h3 {
+    display: flex;
+    justify-content: center;
+    font-family: 'Bubbleboddy Neue', sans-serif;
+}
+
+
+p {
     font-family: 'Comfortaa', sans-serif;
     color: #151217;
+    text-align: justify;
+    padding-top: 10px;
 }
-
-
