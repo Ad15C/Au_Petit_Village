@@ -26,6 +26,15 @@ h2 {
     margin-bottom: 20px; 
 }
 
+h3 {
+    color: #F9D0A3 ;
+    text-decoration:underline #F9D0A3;
+}
+
+h3:hover {
+    color: #da001e;
+}
+
 /* Conteneur des produits */
 .product-container {
     display: flex;
@@ -55,6 +64,8 @@ h2 {
     display: flex;
     justify-content: center;
     font-family: 'Comfortaa', sans-serif;
+    color: #151217;
+    text-decoration: underline #151217;
     
 }
 
@@ -71,3 +82,5 @@ p {
     text-align: justify;
     padding-top: 10px;
 }
+
+
