@@ -1,11 +1,18 @@
 <h1>Page Produit</h1>
 
-<div *ngIf="productDetails">
+<div *ngIf="productDetails; else noProduct">
     <h2>{{ productDetails.name }}</h2>
     <img [src]="productDetails.imageUrl" alt=" {{ productDetails.name }}"/>
     <p>{{ productDetails.description }}</p>
-    <p>Price: {{ productDetails.price | currency:'EUR' }} </p>
+    <p id="price">Price: {{ productDetails.price | currency:'EUR' }} </p>
   </div>
+
+<!-- Template pour le cas où productDetails est null-->
+<ng-template #noProduct>
+    <div id="noProductMessage">
+        <p>Oups...Aucun produit trouvé. Retournez sur notre page d'accueil <a routerLink="/">ici</a></p>
+    </div>
+</ng-template>
   
 
   

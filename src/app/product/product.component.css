@@ -27,6 +27,14 @@ p {
     color: #151217;
     text-align: justify;
     padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#price {
+    text-decoration: underline;
+    font-weight: bold;
 }
 
 img {
