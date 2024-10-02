@@ -1,1 +1,14 @@
-<p>product works!</p>
+<h1>Page Produit</h1>
+
+<div *ngIf="productDetails">
+    <h2>{{ productDetails.name }}</h2>
+    <img [src]="productDetails.imageUrl" alt=" {{ productDetails.name }}"/>
+    <p>{{ productDetails.description }}</p>
+    <p>Price: {{ productDetails.price | currency:'EUR' }} </p>
+  </div>
+  
+
+  
+    
+
+  

@@ -1,3 +1,14 @@
+@font-face {
+    font-family: 'Bubbleboddy Neue';
+    src: url('/public/fonts/Bubblebody\ Neue/') format('truetype');
+    font-weight: thin;
+}
+
+@font-face {
+    font-family: 'Comfortaa';
+    src: url('/public/fonts/Comfortaa/Comfortaa-SemiBold.ttf') format('truetype');
+}
+
 body, .container {
     height: 100%;
 }
