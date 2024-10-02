@@ -1,0 +1,25 @@
+h1 {
+    font-family: 'Bubbleboddy Neue', sans-serif;
+    color: #da001e;
+    margin: 10px;
+    padding-top: 20px;
+}
+
+p {
+    font-family: 'Comfortaa', sans-serif;
+    color: #151217;
+    text-align: justify;
+    padding-top: 10px;
+}
+
+div {
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+img {
+    max-width: 300px;
+    padding: 15px;
+}
