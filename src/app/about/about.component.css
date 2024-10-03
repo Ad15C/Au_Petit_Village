@@ -1,7 +1,7 @@
 h1 {
     font-family: 'Bubbleboddy Neue', sans-serif;
     color: #da001e;
-    margin: 10px;
+    margin: 20px;
     padding-top: 20px;
 }
 
@@ -14,6 +14,7 @@ p {
 
 div {
     padding-top: 10px;
+    margin: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
