@@ -7,6 +7,7 @@ h1, h2 {
 
 h1 {
     color: #da001e;
+    margin: 20px;
 }
 
 h2 {
@@ -26,7 +27,7 @@ p {
     font-family: 'Comfortaa', sans-serif;
     color: #151217;
     text-align: justify;
-    padding-top: 10px;
+    padding-top: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;

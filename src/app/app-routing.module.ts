@@ -6,7 +6,6 @@ import { ProductComponent } from './product/product.component';
 
 const routes: Routes = [
   {path:'', component: HomeComponent},
-  { path: 'product', redirectTo: '/', pathMatch: 'full' }, /* Redirige si aucun ID n'est fourni */
   {path: "product/:id", component: ProductComponent}, /*Route pour afficher le produit avec l'ID*/
   {path: "a-propos", component: AboutComponent}
 
