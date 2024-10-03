@@ -6,8 +6,19 @@
         </div>
         <div class="product">
             <h2>Nos Produits Vedettes:</h2>
-                <div class="product-list">
-                    <div *ngFor="let product of products">
+                <div class="product-filters">
+                    <select name="filter" class="filter-select" [(ngModel)]="filterProduct">
+                        <option value="All"> Tous les produits</option>
+                        <option value="Name"> Nom</option>
+                    </select>
+                    
+                    <select name="sort" class="sort-select" [(ngModel)]="sortBy">
+                        <option value="asc"> Prix Croissant</option>
+                        <option value="desc"> Prix Décroissant</option>
+                    </select>
+                    </div>
+                    <div class="product-list">
+                    <div *ngFor="let product of products | filterByName: filterProduct | sortByPrice: sortBy ">                  
                         <a [routerLink]="['/product', product.id]">
                         <h3>{{ product.name }}</h3>
                         <img [src]="product.imageUrl" alt=" {{ product.name }}"/>
