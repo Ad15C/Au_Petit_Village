@@ -20,6 +20,4 @@ export class SortByPricePipe implements PipeTransform {
     }
     return products;
   }
-  
-
 }

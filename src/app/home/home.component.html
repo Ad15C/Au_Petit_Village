@@ -18,7 +18,7 @@
                     </select>
                     </div>
                     <div class="product-list">
-                    <div *ngFor="let product of products | filterByName: filterProduct | sortByPrice: sortBy ">                  
+                        <div *ngFor="let product of (products | sortByPrice: sortBy | filterByName: filterProduct)">               
                         <a [routerLink]="['/product', product.id]">
                         <h3>{{ product.name }}</h3>
                         <img [src]="product.imageUrl" alt=" {{ product.name }}"/>
