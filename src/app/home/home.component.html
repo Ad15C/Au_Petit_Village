@@ -2,31 +2,43 @@
     <div class="content">
         <div class="intro">
             <h1>{{ title }}</h1>
-                <p>{{ presentation }}</p>
+            <p>{{ presentation }}</p>
         </div>
+
         <div class="product">
-            <h2>Nos Produits Vedettes:</h2>
-                <div class="product-filters">
-                    <select name="filter" class="filter-select" [(ngModel)]="filterProduct">
-                        <option value="All"> Tous les produits</option>
-                        <option value="Name"> Nom</option>
-                    </select>
-                    
-                    <select name="sort" class="sort-select" [(ngModel)]="sortBy">
-                        <option value="asc"> Prix Croissant</option>
-                        <option value="desc"> Prix Décroissant</option>
-                    </select>
-                    </div>
-                    <div class="product-list">
-                        <div *ngFor="let product of (products | sortByPrice: sortBy | filterByName: filterProduct)">               
+            <h2>Nos Produits Vedettes :</h2>
+
+            <div class="product-filters">
+                <input
+                    type="text"
+                    class="search-input"
+                    [(ngModel)]="searchTerm"
+                    placeholder="Rechercher une figurine par son nom"
+                />
+
+                <select name="sort" class="sort-select" [(ngModel)]="sortBy">
+                    <option value="asc">Prix croissant</option>
+                    <option value="desc">Prix décroissant</option>
+                </select>
+            </div>
+
+            <div class="product-list">
+                <ng-container *ngIf="(products | filterByName: searchTerm).length > 0; else noProduct">
+                    <div *ngFor="let product of (products | filterByName: searchTerm | sortByPrice: sortBy)">
                         <a [routerLink]="['/product', product.id]">
-                        <h3>{{ product.name }}</h3>
-                        <img [src]="product.imageUrl" alt=" {{ product.name }}"/>
-                        <p>Prix: {{ product.price | currency: 'EUR' }}</p>
+                            <h3>{{ product.name }}</h3>
+                            <img [src]="product.imageUrl" [alt]="product.name" />
+                            <p>Prix : {{ product.price | currency:'EUR' }}</p>
                         </a>
                     </div>
-                </div>
+                </ng-container>
+
+                <ng-template #noProduct>
+                    <p class="no-product" *ngIf="searchTerm">
+                        Aucun produit trouvé pour "{{ searchTerm }}"
+                    </p>
+                </ng-template>
+            </div>
         </div>
     </div>
 </main>
-

@@ -1,111 +1,158 @@
-@font-face {
-    font-family: 'Bubbleboddy Neue';
-    src: url('assets/fonts/Bubbleboddy_Neue.ttf') format('truetype');
-    font-weight: thin;
-}
-
-@font-face {
-    font-family: 'Comfortaa';
-    src: url('assets/fonts/Comfortaa/Comfortaa-SemiBold.ttf') format('truetype');
-}
-
-/* Styles pour les titres */
 h1, h2, h3 {
-    font-family: 'Bubbleboddy Neue', sans-serif;
+    font-family: 'Bubblebody Neue', sans-serif;
 }
 
 h1 {
-    color: #da001e;
+    color: #DA001E;
     margin: 20px;
     padding-top: 20px;
+    text-align: center;
 }
 
 h2 {
-    color: #fdd90b;
-    text-align: center; 
-    margin-bottom: 20px; 
-    padding: 20px;
+    color: #FDD90B;
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    background-color: white;
+    border-radius: 8px;
+    display: inline-block;
 }
 
 h3 {
-    color: #F9D0A3 ;
-    text-decoration:underline #F9D0A3;
+    color: #151217;
+    text-decoration: underline #F9D0A3;
+    margin-bottom: 10px;
 }
 
 h3:hover {
-    color: #da001e;
+    color: #DA001E;
 }
 
-.product-filters {
-    display:flex ;
-    flex-direction: row;
-    gap: 20px;
-    margin: 10px;
-    min-height: 30px;
+.content {
+    max-width: 1200px;
+    margin: auto;
 }
 
-.filter-select,
-.sort-select {
-    background-color: white; 
-    color: #da001e; 
-    border: 1px solid #ccc; 
-    padding: 10px; 
-    font-size: 16px; 
-    cursor: pointer; 
-    font-family: 'Comfortaa', sans-serif;
-}
-
-
-
-
-.product {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-}
-
-/* Conteneur des produits */
-.product-list {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly; 
-    gap: 20px; 
-    padding: 10px;
-    margin-bottom: 20px;
-}
-
-
-
-/* Style pour les images */
-.product img {
-    max-width: 150px;
-    height: auto;
-    padding: 10px;
-}
-
-.product p {
-    display: flex;
-    justify-content: center;
-    font-family: 'Comfortaa', sans-serif;
-    color: #151217;
-    text-decoration: underline #151217;
-    font-weight: bold;
-    
-}
-
-.product h3 {
-    display: flex;
-    justify-content: center;
-    font-family: 'Bubbleboddy Neue', sans-serif;
-}
-
-
-p {
+.intro p {
     font-family: 'Comfortaa', sans-serif;
     color: #151217;
     text-align: justify;
     padding-top: 10px;
     margin: 20px;
+    line-height: 1.6;
 }
 
+.product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
+.product-filters {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    margin: 10px 0 25px 0;
+    min-height: 30px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.search-input {
+    background-color: white;
+    color: #151217;
+    border: 2px solid #FDD90B;
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 8px;
+    min-width: 250px;
+    font-family: 'Comfortaa', sans-serif;
+    transition: all 0.3s ease;
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: #DA001E;
+    box-shadow: 0 0 5px rgba(218, 0, 30, 0.3);
+}
+
+.sort-select {
+    background-color: white;
+    color: #DA001E;
+    border: 2px solid #FDD90B;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 8px;
+    font-family: 'Comfortaa', sans-serif;
+}
+
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    padding: 10px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.product-list > div {
+    background: white;
+    border-radius: 12px;
+    padding: 18px;
+    text-align: center;
+    min-width: 210px;
+    max-width: 220px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.product-list > div:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.product-list a {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+
+.product img {
+    max-width: 120px;
+    height: auto;
+    margin: 10px auto 15px auto;
+    display: block;
+}
+
+.product p {
+    text-align: center;
+    font-family: 'Comfortaa', sans-serif;
+    color: #151217;
+    text-decoration: underline #151217;
+    font-weight: bold;
+    margin: 10px 0 0 0;
+}
+
+.product h3 {
+    display: flex;
+    justify-content: center;
+    font-family: 'Bubblebody Neue', sans-serif;
+    text-align: center;
+    min-height: 48px;
+    align-items: center;
+}
+
+.no-product {
+    font-family: 'Comfortaa', sans-serif;
+    font-size: 18px;
+    color: #DA001E;
+    text-align: center;
+    margin-top: 20px;
+    font-weight: bold;
+}

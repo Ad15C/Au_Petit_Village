@@ -1,34 +1,37 @@
 footer {
     background-color: #F9D0A3;
     display: flex;
-    flex-direction: column;   
+    justify-content: center;
+    padding: 20px 10px;
 }
 
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 .social_networks {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-content: space-evenly;
-    padding: 5px;
-    margin-top: 20px;
-    gap: 15px; /* Définit un espace de 15px entre les icônes */
+    gap: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
-img {
-    max-width: 20px;
-    max-height: 20px;
+.social_networks img {
+    width: 24px;
+    height: 24px;
 }
 
 .social_networks a {
-    margin: 0 10px; /* Ajoute 10px de marge de chaque côté */ 
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
 
-
 small {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    padding: 5px;
-    margin: 5px;
+    font-family: 'Comfortaa', sans-serif;
+    color: #151217;
 }
