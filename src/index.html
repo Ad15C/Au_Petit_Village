@@ -4,11 +4,24 @@
   <meta charset="utf-8">
   <title>Au Petit Village</title>
   <base href="/">
+  <meta name="description" content="Au Petit Village propose des figurines inspirées de l\’univers Astérix et Obélix.">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" href="assets/Logos/favicon.jpg">
 </head>
 <body>
   <app-root></app-root>
   
+  <script>
+    const burgerBtn = document.getElementById('burger-btn');
+    const mainNav = document.getElementById('main-nav');
+
+    burgerBtn.addEventListener('click', () => {
+        mainNav.classList.toggle('nav-open');
+
+        const isOpen = mainNav.classList.contains('nav-open');
+        burgerBtn.setAttribute('aria-expanded', isOpen);
+        burgerBtn.classList.toggle('active');
+    });
+</script>
 </body>
 </html>

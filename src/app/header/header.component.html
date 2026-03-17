@@ -1,11 +1,41 @@
 <header>
-    <a routerLink="/">
-        <img src="assets/Logos/Logo.png" alt="Logo Au Petit Village" />
+  <a routerLink="/" class="logo" (click)="closeMenu()">
+    <img src="/assets/Logos/Logo.png" alt="Logo Au Petit Village">
+  </a>
+
+  <button
+    class="burger"
+    [class.active]="menuOpen"
+    type="button"
+    (click)="toggleMenu()"
+    [attr.aria-expanded]="menuOpen"
+    aria-label="Ouvrir le menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+  <nav id="main-nav" [class.nav-open]="menuOpen">
+    <a
+      routerLink="/"
+      routerLinkActive="active-link"
+      [routerLinkActiveOptions]="{ exact: true }"
+      (click)="closeMenu()">
+      Accueil
     </a>
 
-    <nav>
-        <a routerLink="/">Accueil</a>
-        <a routerLink="/a-propos">À propos</a>
-        <a routerLink="/contact">Contact</a>
-    </nav>
+    <a
+      routerLink="/a-propos"
+      routerLinkActive="active-link"
+      (click)="closeMenu()">
+      À propos
+    </a>
+
+    <a
+      routerLink="/contact"
+      routerLinkActive="active-link"
+      (click)="closeMenu()">
+      Contact
+    </a>
+  </nav>
 </header>
