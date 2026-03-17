@@ -9,9 +9,10 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { ProductComponent } from './product/product.component';
 import { ProductsService } from './products.service';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FilterByNamePipe } from './filter-by-name.pipe';
 import { SortByPricePipe } from './sort-by-price.pipe';
+import { ContactComponent } from './contact/contact.component';
 
 
 
@@ -25,6 +26,7 @@ import { SortByPricePipe } from './sort-by-price.pipe';
     ProductComponent,
     FilterByNamePipe,
     SortByPricePipe,
+    ContactComponent,
 
 
   ],
@@ -32,6 +34,7 @@ import { SortByPricePipe } from './sort-by-price.pipe';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    ReactiveFormsModule
   ],
   providers: [
     ProductsService
