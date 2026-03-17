@@ -35,3 +35,23 @@ p {
     max-width: 300px;
     padding: 15px;
 }
+
+.product-link {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.btn-products {
+    background-color: #DA001E;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-family: 'Bubblebody Neue', sans-serif;
+    font-size: 18px;
+    transition: all 0.3s ease;
+}
+
+.btn-products:hover {
+    background-color: #151217;
+}

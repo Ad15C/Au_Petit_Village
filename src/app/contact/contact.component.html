@@ -1,0 +1,49 @@
+<section class="contact-section" id="contact">
+    <div class="contact-header">
+        <h2>Contact</h2>
+        <p class="contact-intro">
+            Pour toute demande d'information, n'hésitez pas à nous contacter via le formulaire ci-dessous.
+            Nous vous répondrons dans les plus brefs délais.
+        </p>
+    </div>
+
+    <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" novalidate class="contact-form">
+        <div class="form-group">
+            <label for="name">Nom</label>
+            <input id="name" type="text" formControlName="name" placeholder="Votre nom">
+            <small *ngIf="f['name'].touched && f['name'].invalid">
+                Le nom est requis (minimum 2 caractères).
+            </small>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input id="email" type="email" formControlName="email" placeholder="votre@email.com">
+            <small *ngIf="f['email'].touched && f['email'].invalid">
+                Merci de saisir une adresse email valide.
+            </small>
+        </div>
+
+        <div class="form-group">
+            <label for="subject">Sujet</label>
+            <input id="subject" type="text" formControlName="subject" placeholder="Objet de votre message">
+            <small *ngIf="f['subject'].touched && f['subject'].invalid">
+                Le sujet est requis.
+            </small>
+        </div>
+
+        <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" rows="6" formControlName="message" placeholder="Écrivez votre message ici..."></textarea>
+            <small *ngIf="f['message'].touched && f['message'].invalid">
+                Le message doit contenir au moins 10 caractères.
+            </small>
+        </div>
+
+        <button type="submit">Envoyer</button>
+
+        <p class="success-message" *ngIf="successMessage">
+            Votre message a bien été envoyé.
+        </p>
+    </form>
+</section>
