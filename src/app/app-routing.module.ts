@@ -9,7 +9,8 @@ const routes: Routes = [
   {path:'', component: HomeComponent},
   {path: "product/:id", component: ProductComponent}, /*Route pour afficher le produit avec l'ID*/
   {path: "a-propos", component: AboutComponent},
-  { path: 'contact', component: ContactComponent }
+  { path: 'contact', component: ContactComponent },
+  { path: '**', redirectTo: '' }
 
 ];
 
