@@ -1,5 +1,7 @@
 # Au Petit Village
 
+Application web Angular développée dans le cadre de la formation Développeur Web et Web Mobile – CEF.
+
 Projet Angular réalisé dans le cadre de la formation **Développeur Web et Web Mobile – CEF**.
 
 Ce projet consiste à **dynamiser un site web avec Angular** en intégrant des fonctionnalités de tri, de recherche et de navigation entre les pages.
@@ -31,16 +33,29 @@ Grâce à ce projet, les compétences suivantes sont mises en pratique :
 
 ---
 
+# Compétences développées
+
+- Développement avec Angular
+- Gestion des composants
+- Routing Angular
+- Recherche et tri dynamique
+- Manipulation de données avec RxJS
+- Architecture frontend
+- Responsive design
+- Organisation d’application Angular
+
+---
+
 # Identité graphique
 
 ## Couleurs principales
 
 | Couleur | Code |
-|-------|------|
-Rouge | `#DA001E` |
-Jaune | `#FDD90B` |
-Beige | `#F9D0A3` |
-Noir | `#151217` |
+|----------|----------|
+| Rouge | `#DA001E` |
+| Jaune | `#FDD90B` |
+| Beige | `#F9D0A3` |
+| Noir | `#151217` |
 
 ## Typographie
 
@@ -107,16 +122,25 @@ Contient :
 
 ```bash
 git clone https://github.com/ton-repository/au-petit-village.git
+```
 
-## 2 Installer les dépendances
-npm install 
+## 2️⃣ Installer les dépendances
 
-## 3 Lancer le projet
+```bash
+npm install
+```
+
+## 3️⃣ Lancer le projet
+
+```bash
 ng serve
+```
 
-## 4 Ouvrir dans le navigateur
+## 4️⃣ Ouvrir dans le navigateur
+
 ```bash
 http://localhost:4200
+```
 
 # Structure du projet
 
